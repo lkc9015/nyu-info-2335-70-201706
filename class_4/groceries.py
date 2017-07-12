@@ -34,7 +34,6 @@ for product in products:
     print (" + " + product["name"] + str(price_usd))
 
 ## Products
-
 print("----------------------")
 
 departments = []  ## for calculating the number of unique departments, let's make an empty list first.
@@ -43,10 +42,10 @@ for product in products:
 
 departments = set(departments) ## set: remove duplicated values, a list becomes a dictionary
 departments = list(departments) ## change dictionary to list
+departments = sorted(departments) ## sort departments by name
+# departments.sort() --> another way to sort
 
 print("THERE ARE " + str(len(departments)) + " DEPARTMENTS")
-
-departments.sort()
 
 for department in departments:
     print(" + " + department.title())
