@@ -1,0 +1,41 @@
+[1mdiff --git a/class_4/groceries.py b/class_4/groceries.py[m
+[1mindex cb2cb90..0a59066 100644[m
+[1m--- a/class_4/groceries.py[m
+[1m+++ b/class_4/groceries.py[m
+[36m@@ -40,16 +40,29 @@[m [mdepartments = []  ## for calculating the number of unique departments, let's mak[m
+ for product in products:[m
+     departments.append(product["department"])[m
+ [m
+[31m-departments = set(departments) ## set: remove duplicated values, a list becomes a dictionary[m
+[31m-departments = list(departments) ## change dictionary to list[m
+[31m-departments = sorted(departments) ## sort departments by name[m
+[31m-# departments.sort() --> another way to sort[m
+[32m+[m[32mUnique_departments = set(departments) ## set: remove duplicated values, a list becomes a dictionary[m
+[32m+[m[32mUnique_departments = list(Unique_departments) ## change dictionary to list[m
+[32m+[m[32mUnique_departments = sorted(Unique_departments) ## sort departments by name[m
+[32m+[m
+[32m+[m[32mprint("THERE ARE " + str(len(Unique_departments)) + " DEPARTMENTS")[m
+[32m+[m
+[32m+[m[32mfor department in Unique_departments:[m
+[32m+[m[32m    count_of_departments = departments.count(department)[m
+[32m+[m[32m    print(" + " + department.title() + " (" + str(count_of_departments) + " products)")[m
+ [m
+[31m-print("THERE ARE " + str(len(departments)) + " DEPARTMENTS")[m
+ [m
+[31m-for department in departments:[m
+[31m-    print(" + " + department.title())[m
+[32m+[m[32m### different way[m
+[32m+[m[32m# departments = set(departments) ## set: remove duplicated values, a list becomes a dictionary[m
+[32m+[m[32m# departments = list(Unique_departments) ## change dictionary to list[m
+[32m+[m[32m# departments = sorted(Unique_departments) ## sort departments by name[m
+[32m+[m[32m# departments.sort() --> another way to sort[m
+[32m+[m
+[32m+[m[32m# print("THERE ARE " + str(len(departments)) + " DEPARTMENTS")[m
+ [m
+[32m+[m[32m# def get_products(department_name):[m
+[32m+[m[32mfor department in Unique_departments:[m
+[32m+[m[32m    count_of_departments = departments.count(department)[m
+[32m+[m[32m    print(" + " + department.title() + " (" + str(count_of_departments) + " products)")[m
+ [m
+ [m
+ [m
